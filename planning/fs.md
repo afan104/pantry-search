@@ -1,3 +1,5 @@
+git ad
+
 File structure:
 
 ```
@@ -27,5 +29,4 @@ myapp/
 ├── go.sum
 ├── Makefile
 └── README.md
-
 ```

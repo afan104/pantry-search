@@ -10,7 +10,7 @@ Early development. The backend API is in progress (Go + Gin + SQLite). Frontend 
 
 | Layer    | Choice                                     |
 | -------- | ------------------------------------------ |
-| Backend  | Go,[Gin](https://github.com/gin-gonic/gin) |
+| Backend  | Go, [Gin](https://github.com/gin-gonic/gin) |
 | Database | SQLite (`mattn/go-sqlite3`)                |
 | Frontend | Not yet started                            |
 
@@ -81,11 +81,15 @@ Relational (SQLite) vs. NoSQL: unique-email enforcement and race-safe writes nee
 - [ ] Pull ingredients directly from a recipe URL (scraping)
 - [ ] Standardized units with a conversion system; unconvertible inputs are shown in original units for manual comparison
 - [ ] Automatic backups of pantry state before each action, so any change can be undone
-- [ ] Grafana dashboard for visualization
+- [ ] Rate-limiting for authentication security
+- [ ] Prometheus `/metrics` endpoint
+- [ ] Grafana dashboard for visualization, reading from the `/metrics` endpoint
+- [ ] Move to cloud
 
 ### Future Considerations
 
 - Multi-user support with per-user auth
 - Bulk input via file upload
 - Mobile compatibility
+- API versioning, once there's a client (e.g. a mobile app) that can't update in lockstep with the backend
 - Waste tracking (sustainability)
