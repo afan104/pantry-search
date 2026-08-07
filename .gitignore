@@ -1,5 +1,6 @@
 # development
-planning/init.md
+planning/init*
+db/initdb.py
 
 # Go
 bin/

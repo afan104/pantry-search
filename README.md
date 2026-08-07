@@ -8,11 +8,11 @@ Early development. The backend API is in progress (Go + Gin + SQLite). Frontend 
 
 ## Tech Stack
 
-| Layer    | Choice                                     |
-| -------- | ------------------------------------------ |
-| Backend  | Go, [Gin](https://github.com/gin-gonic/gin) |
-| Database | SQLite (`mattn/go-sqlite3`)                |
-| Frontend | Not yet started                            |
+| Layer    | Choice                                    |
+| -------- | ----------------------------------------- |
+| Backend  | Go,[Gin](https://github.com/gin-gonic/gin) |
+| Database | SQLite (`mattn/go-sqlite3`)             |
+| Frontend | Not yet started                           |
 
 ## Getting Started
 
@@ -29,8 +29,8 @@ The API serves on `:3000`. A SQLite database file is created at the repo root on
 
 ## API Endpoints
 
-| Method | Path                            | Description                                                                          |
-| ------ | ------------------------------- | ------------------------------------------------------------------------------------ |
+| Method | Path                              | Description                                                                          |
+| ------ | --------------------------------- | ------------------------------------------------------------------------------------ |
 | GET    | `/getIngredients`               | List the entire pantry                                                               |
 | GET    | `/getIngredient/:ingredient`    | Look up a specific ingredient                                                        |
 | POST   | `/postIngredient/:ingredient`   | Add quantity to an existing entry, or create it if it doesn't exist                  |
@@ -41,14 +41,14 @@ The API serves on `:3000`. A SQLite database file is created at the repo root on
 
 **Pantry**
 
-| Field          | Notes    |
-| -------------- | -------- |
-| ingredient     |          |
-| ingredientType | optional |
-| quantity       |          |
-| units          |          |
-| dateUpdated    |          |
-| expectedExpiry |          |
+| Field          | Notes      |
+| -------------- | ---------- |
+| ingredient     |            |
+| ingredientType | optional  |
+| quantity       |            |
+| units          |            |
+| dateUpdated    |            |
+| expectedExpiry |            |
 
 **Users**
 
@@ -81,7 +81,7 @@ Relational (SQLite) vs. NoSQL: unique-email enforcement and race-safe writes nee
 - [ ] Pull ingredients directly from a recipe URL (scraping)
 - [ ] Standardized units with a conversion system; unconvertible inputs are shown in original units for manual comparison
 - [ ] Automatic backups of pantry state before each action, so any change can be undone
-- [ ] Rate-limiting for authentication security
+- [ ] Rate-limiting for authentication security()
 - [ ] Prometheus `/metrics` endpoint
 - [ ] Grafana dashboard for visualization, reading from the `/metrics` endpoint
 - [ ] Move to cloud
