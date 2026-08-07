@@ -32,9 +32,9 @@ func main() {
 	// controllers
 	router.GET("/getIngredients", handlers.GetIngredients(db))
 	router.GET("/getIngredient/:ingredient", handlers.GetIngredient(db))
-	// router.POST("/postIngredient/:ingredient", postIngredient)
-	// router.DELETE("/deleteIngredient/:ingredient", deleteIngredient)
-	// router.PUT("/putIngredient/:ingredient", putIngredient)
+	router.POST("/postIngredient/:ingredient", handlers.PostIngredient(db))
+	router.DELETE("/deleteIngredient/:ingredient", handlers.DeleteIngredient(db))
+	router.PUT("/putIngredient/:ingredient", handlers.PutIngredient(db))
 
 	// attaach router to server; log success/error
 	if e := router.Run(address); e != nil {
