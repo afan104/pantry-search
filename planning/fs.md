@@ -1,5 +1,3 @@
-git ad
-
 File structure:
 
 ```

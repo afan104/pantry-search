@@ -1,0 +1,32 @@
+name: CI Pipeline
+
+# full steps: triggers -> jobs -> steps
+
+# triggers
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# jobs
+jobs:
+  test:
+    name: Run Tests
+    runs-on: macos-latest
+
+    # define steps
+    steps:
+      - name: Checkout Github code
+        uses: actions/checkout@v7
+
+      # setup environment
+      - name: Setup Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+
+      # run commands
+      - run: go mod download # download go.mod dependencies
+      - run: go build ./...
+      - run: go test ./...
